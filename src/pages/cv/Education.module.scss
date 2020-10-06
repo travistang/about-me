@@ -1,0 +1,44 @@
+.educationItemContainer {
+  display: flex;
+  padding-bottom: 32px;
+  .grade {
+    color: var(--text-inverse-dim);
+  }
+  .dateContainer {
+    width: var(--cv-date-column-width);
+    line-height: var(--h5);
+    text-align: right;
+    text-transform: uppercase;
+
+    > :not(:first-child) {
+      &:before {
+        content: "\a";
+        white-space: pre;
+      }
+    }
+  }
+
+  .contentContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding-left: 8px;
+
+    * {
+      line-height: var(--h5);
+    }
+    .educationHeader {
+      font-weight: bold;
+      line-height: var(--h5);
+      margin-bottom: 16px;
+      > :not(:last-child):after {
+        content: " - ";
+      }
+    }
+
+    .educationDescription {
+      line-height: var(--h5);
+      padding-top: var(--h5);
+    }
+  }
+}

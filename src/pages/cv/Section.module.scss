@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: var(--section-padding);
+
+  &:first-of-type {
+    padding-top: 0;
+  }
+
+  .sectionTitle {
+    $displace-distance: calc(-0.5 * var(--section-height));
+    height: var(--section-height);
+    // push the title half way down to the middle of the border
+    margin-bottom: calc(-1 * #{$displace-distance});
+    border-bottom: 1px solid var(--primary);
+    display: flex;
+    position: relative;
+    .title {
+      display: flex;
+      background-color: var(--background);
+      align-items: center;
+      height: var(--section-height);
+      color: var(--primary);
+      font-size: var(--h5);
+      text-transform: uppercase;
+      padding-right: 8px;
+      position: absolute;
+      bottom: $displace-distance;
+    }
+  }
+}

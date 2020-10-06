@@ -1,0 +1,9 @@
+.languageItem {
+  display: flex;
+  justify-content: space-between;
+  margin: 4px 0;
+  font-size: var(--h5);
+  :first-child {
+    font-weight: bold;
+  }
+}

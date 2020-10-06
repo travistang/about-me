@@ -1,0 +1,29 @@
+{
+  "contacts": [
+    {
+      "name": "Email",
+      "value": "travis.tang@tum.de",
+      "icon": "at"
+    },
+    {
+      "name": "Email",
+      "value": "travisyttang@gmail.com",
+      "icon": "at"
+    },
+    {
+      "name": "Website",
+      "value": "travistang.github.io/about",
+      "icon": "website"
+    },
+    {
+      "name": "Github",
+      "value": "travistang",
+      "icon": "github"
+    },
+    {
+      "name": "LinkedIn",
+      "value": "travis-tang-08289074",
+      "icon": "linkedin"
+    }
+  ]
+}

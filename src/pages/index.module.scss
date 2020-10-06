@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+
+:root {
+  --primary: #053c5e;
+  --primary-highlight: #1f7a8c;
+  --primary-tint: #bfdbf7;
+  --text: #1f1f1f;
+
+  --text-inverse: #eeeeee;
+  --text-inverse-dim: #cccccc;
+
+  --secondary: #a31621;
+  --secondary-highlight: #db222a;
+
+  --background: #eeeeee;
+
+  --cv-summary-width: 32%;
+
+  --font-family: "Noto Sans", sans-serif;
+
+  --h1: 36px;
+  --h2: 30px;
+  --h3: 26px;
+  --h4: 20px;
+  --h5: 14px;
+
+  // miscellaneous config
+  --name-header-height: 72px;
+  --section-height: 26px;
+  --page-padding: 16px;
+  --section-padding: 8px 16px;
+
+  --cv-date-column-width: 10vw;
+}
+
+[data-theme="dark"] {
+  --primary: #bb86fc;
+  --secondary: #03dac5;
+  --background: #1f1f1f;
+  --text: white;
+}
+
+* {
+  color: var(--text);
+  font-family: var(--font-family);
+}

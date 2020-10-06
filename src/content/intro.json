@@ -1,0 +1,116 @@
+{
+  "intro": {
+    "name": "Tang, Yiu Ting",
+    "home": "Hong Kong",
+    "location": "Munich, Germany",
+    "title": "Web developer",
+    "summary": "I have interest in wide range of areas in computer science with focus on frontend development and am ambitious to combine my knowledge on these fields to create solutions that benefit people",
+    "languages": [
+      {
+        "name": "Cantonese",
+        "proficiency": "Native"
+      },
+      {
+        "name": "Mandarin",
+        "proficiency": "Fluent"
+      },
+      {
+        "name": "English",
+        "proficiency": "Fluent"
+      },
+      {
+        "name": "German",
+        "proficiency": "Intermediate"
+      }
+    ],
+    "skills": [
+      {
+        "name": "frontend",
+        "items": [
+          {
+            "name": "React.js",
+            "icon": "react",
+            "tools": ["Redux", "Redux-saga", "React-Router", "Gastby"]
+          },
+          {
+            "name": "Vue.js",
+            "icon": "vuejs"
+          },
+          {
+            "name": "Angular.js",
+            "icon": "angular",
+            "tools": ["Ionic"]
+          }
+        ]
+      },
+      {
+        "name": "backend",
+        "items": [
+          {
+            "name": "Node.js",
+            "tools": ["express", "mongoose", "feathers", "GraphQL (Apollo)"]
+          },
+          {
+            "name": "Python",
+            "tools": ["Flask", "Django"]
+          }
+        ]
+      },
+      {
+        "name": "database",
+        "items": [
+          {
+            "name": "NoSQL",
+            "tools": ["MongoDB", "Firebase"]
+          },
+          {
+            "name": "SQL",
+            "tools": ["MySQL", "Postgres (Hasura)"]
+          }
+        ]
+      },
+      {
+        "name": "Machine Learning",
+        "items": [
+          {
+            "name": "PyTorch"
+          },
+          {
+            "name": "Keras"
+          },
+          {
+            "name": "Tensorflow"
+          }
+        ]
+      },
+      {
+        "name": "Mobile development",
+        "items": [
+          {
+            "name": "iOS",
+            "tools": ["Swift"]
+          }
+        ]
+      },
+      {
+        "name": "Miscellaneous",
+        "items": [
+          {
+            "name": "Git"
+          },
+          {
+            "name": "Docker"
+          },
+          {
+            "name": "Embedded / IoT",
+            "tools": ["Raspberry Pi", "ESP 8266", "Arduino"]
+          },
+          {
+            "name": "Web scraping",
+            "tools": ["Puppeteer", "Cheerio", "Phantom.js"]
+          }
+        ]
+      }
+    ]
+  }
+}

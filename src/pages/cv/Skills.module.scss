@@ -1,0 +1,14 @@
+.skillsContainer {
+  padding: 0 4px 4px;
+  .skillsTitle {
+    color: var(--primary);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .itemList {
+    padding-left: 8px;
+    .skillItem:not(:last-child):after {
+      content: "; ";
+    }
+  }
+}

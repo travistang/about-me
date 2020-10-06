@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  // A4 size
+  width: 21cm;
+  height: 29.7cm;
+  margin: 0;
+
+  overflow: hidden;
+  * {
+    font-size: var(--h5);
+  }
+  .contentContainer {
+    flex: 1;
+    display: flex;
+    .leftContainer {
+      flex: 1;
+      background-color: var(--background);
+    }
+
+    .rightContainer {
+      width: var(--cv-summary-width);
+      background-color: var(--primary-tint);
+      * > * {
+        background-color: var(--primary-tint);
+      }
+    }
+  }
+}

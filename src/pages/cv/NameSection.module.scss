@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px;
+  height: var(--name-header-height);
+  width: 100%;
+  background-color: var(--primary);
+  * {
+    color: var(--text-inverse);
+    background-color: var(--primary);
+  }
+
+  .name {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: var(--h3);
+  }
+  .title {
+    font-size: var(--h5);
+    color: var(--text-inverse-dim);
+  }
+}

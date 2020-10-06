@@ -1,0 +1,76 @@
+type Language implements Node {
+  name: String!
+  proficiency: String!
+}
+
+type SkillTool implements Node {
+  name: String!
+  icon: String
+  tools: [String!]
+}
+
+type Skill implements Node {
+  name: String!
+  items: [SkillTool]!
+}
+
+type Intro implements Node {
+  name: String!
+  title: String!
+  summary: String!
+  languages: [Language!]!
+  skills: [Skill!]!
+}
+
+type Contact implements Node {
+  name: String!
+  value: String!
+  icon: String
+}
+
+enum ExperienceCategory {
+  FE
+  BE
+  ML
+  IOT
+}
+
+type Experience implements Node {
+  company: String!
+  nature: String!
+  role: String!
+  startDate: Date!
+  endDate: Date
+  technologies: [String!]
+  categories: [ExperienceCategory]
+  synopsis: String!
+  tasks: [String!]
+}
+
+type Project implements Node {
+  name: String!
+  date: String!
+  onGoing: Boolean
+  tech: [String!]
+  url: String
+  synopsis: String!
+}
+
+type Education implements Node {
+  institude: String!
+  degree: String!
+  startDate: Date!
+  endDate: Date
+  courses: [String!]
+  description: String!
+  grade: String
+  thesis: String
+}
+
+type Content implements Node {
+  intro: Intro!
+  contacts: [Contact!]!
+  projects: [Project!]!
+  experiences: [Experience!]!
+  education: [Education!]!
+}

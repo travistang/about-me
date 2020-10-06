@@ -1,0 +1,34 @@
+.experienceItemContainer {
+  display: flex;
+  .dateContainer {
+    line-height: var(--h5);
+    text-align: right;
+    text-transform: uppercase;
+    width: var(--cv-date-column-width);
+
+    > :not(:first-child) {
+      &:before {
+        content: "\a";
+        white-space: pre;
+      }
+    }
+  }
+
+  .contentContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding-left: 16px;
+    .experienceHeader {
+      font-weight: bold;
+      line-height: var(--h5);
+      > :not(:last-child):after {
+        content: " - ";
+      }
+    }
+    .experienceSynopsis {
+      line-height: var(--h5);
+      padding-top: var(--h5);
+    }
+  }
+}
