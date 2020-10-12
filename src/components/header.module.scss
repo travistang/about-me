@@ -44,6 +44,9 @@
   }
 
   &.active {
+    * {
+      color: var(--primary);
+    }
     .headerLinkBottomUnder {
       display: none;
     }

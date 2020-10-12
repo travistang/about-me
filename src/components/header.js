@@ -4,6 +4,8 @@ import iconMap from "./iconMap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { useLocation } from "@reach/router"
+import { SectionVisibilityContext } from "../contexts/SectionVisibilityContext"
+
 import useIsMobile from "../hooks/useIsMobile"
 import PropTypes from "prop-types"
 import classnames from "classnames"
@@ -14,15 +16,14 @@ const DARK_THEME = "dark"
 
 const HeaderLink = ({ title, anchor }) => {
   // check if the link is selected by accessing the anchor of the url
-  const location = useLocation()
-  const isPageUnderAnchor = location.pathname.split("#")[1] === anchor
+  const { visibileSection } = React.useContext(SectionVisibilityContext)
 
   return (
     <AnchorLink
       to={`/#${anchor}`}
       className={classnames(
         styles.headerLinkWrapper,
-        isPageUnderAnchor && styles.active
+        anchor === visibileSection && styles.active
       )}
     >
       <span>{title}</span>

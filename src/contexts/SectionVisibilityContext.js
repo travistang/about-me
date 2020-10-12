@@ -1,10 +1,10 @@
 import React from "react"
 
 const initialVisibilityContextValue = {
-  visbileSection: "",
+  visibileSection: "",
   onChangeVisibileSection: () => {},
 }
-const SectionVisibilityContext = React.createContext(
+export const SectionVisibilityContext = React.createContext(
   initialVisibilityContextValue
 )
 
@@ -13,14 +13,14 @@ export const SectionVisibilityContextProvider = ({ children }) => {
     initialVisibilityContextValue
   )
   /**
-   * Prepare reducers
+   * Prepare reducers (computed context value)
    */
   const contextValue = {
     ...rawContextValue,
     onChangeVisibileSection: newSection =>
       setContextValue({
         ...rawContextValue,
-        visbileSection: newSection,
+        visibileSection: newSection,
       }),
   }
   return (

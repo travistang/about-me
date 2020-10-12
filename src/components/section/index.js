@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import classnames from "classnames"
 import VisibilitySensor from "react-visibility-sensor"
+import { SectionVisibilityContext } from "../../contexts/SectionVisibilityContext"
 import styles from "./index.module.scss"
 
 /**
@@ -9,6 +10,7 @@ import styles from "./index.module.scss"
  */
 
 const Section = ({ children, title, fullPage, className, anchor = "" }) => {
+  const { onChangeVisibileSection } = React.useContext(SectionVisibilityContext)
   return (
     <div
       id={anchor}
@@ -18,7 +20,7 @@ const Section = ({ children, title, fullPage, className, anchor = "" }) => {
         className
       )}
     >
-      <VisibilitySensor onChange={() => console.log("anchor seen" + anchor)}>
+      <VisibilitySensor onChange={() => onChangeVisibileSection(anchor)}>
         <>
           {title && <div className={styles.title}>{title}</div>}
           {children}
