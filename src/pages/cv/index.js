@@ -9,7 +9,7 @@ import Language from "./Language"
 import Skills from "./Skills"
 import Education from "./Education"
 
-const CVPage = props => {
+const CVPage = () => {
   const location = useLocation()
   /**
    * Change theme based on query search params

@@ -11,8 +11,8 @@
       "synopsis": "Develop various web applications with React.js, following the Scrum process.",
       "tasks": [
         "Develop various web applications with React with sophisticated data structure and business logic.",
-        "Making heavy and practical use of Redux, Git, Jira etc.",
-        "Following Agile process: Sprint planning, Code review, standups and QAs"
+        "Making extensive use of tools like Redux, Git, Jira etc. ",
+        "Following scrum process: Sprint planning, code review, standups and QAs"
       ]
     },
     {
@@ -67,7 +67,7 @@
       "technologies": ["Swift", "ARKit", "WebRTC", "flask", "express.js"],
       "tasks": [
         "Develop a real-time video call application on iOS with AR-Powered features, including 3D Drawing, eye tracking, goal-seeking with AR markers.",
-        "The app aims to facilitate communication and enchance communication between engineers on field and remote experts.",
+        "The app aims to facilitate communication and enchance collaboration between engineers on field and remote experts.",
         "Scrum process being followed: Regular sprints, standups, code review and client meetings"
       ],
       "synopsis": "A practical course in which our team follows the scrum development pattern throughour the semester to create a video call iOS app with several Augmented Reality features."

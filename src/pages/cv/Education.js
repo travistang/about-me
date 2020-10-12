@@ -13,7 +13,6 @@ const EducationItem = ({
   startDate,
   endDate,
   grade,
-  description,
   thesis,
 }) => (
   <div className={styles.educationItemContainer}>
@@ -26,8 +25,8 @@ const EducationItem = ({
       <div className={styles.educationHeader}>
         <span>{degree}</span>
         <span>{institude}</span>
+        {grade && <div className={styles.grade}>{grade}</div>}
       </div>
-      {grade && <div className={styles.grade}>{grade}</div>}
       {thesis && (
         <div className={styles.thesisDescription}>
           <b>Thesis: </b>
@@ -48,7 +47,6 @@ const Education = () => {
           startDate
           endDate
           grade
-          description
           thesis
         }
       }

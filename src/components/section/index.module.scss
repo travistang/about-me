@@ -1,0 +1,17 @@
+.sectionContainer {
+  width: 100vw;
+  overflow-y: hidden;
+  padding: var(--page-padding);
+  background-color: var(--background);
+
+  display: flex;
+  &.fullPage {
+    min-height: 100vh;
+    padding-top: var(--name-header-height);
+  }
+  .title {
+    font-size: var(--h3);
+    text-transform: uppercase;
+    margin: var(--page-padding) 0;
+  }
+}

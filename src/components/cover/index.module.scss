@@ -1,0 +1,109 @@
+@import "../../common.scss";
+
+.outerContainer {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - var(--main-header-height)) !important;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex: 1;
+  &.mobile {
+    flex-direction: column;
+
+    .greetings {
+      padding-top: var(--page-padding);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 100%;
+      div {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.cursor {
+  color: var(--primary) !important;
+}
+
+.greetings {
+  flex: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-32px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+
+  75% {
+    transform: translateY(-32px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@mixin appearAnimation {
+  opacity: 0;
+  animation: fadeIn 0.5s linear 5s 1 normal forwards;
+}
+.cvButton {
+  @include appearAnimation;
+  height: 64px;
+  width: 256px;
+  text-transform: uppercase;
+  font-size: var(--h5);
+}
+
+.furtherActionContainer {
+  @include appearAnimation;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  .aboutMeContainer {
+    display: flex;
+    align-items: center;
+    font-size: var(--h4);
+    text-transform: uppercase;
+    text-decoration: none !important;
+    transition: 0.1s linear all;
+    cursor: pointer;
+    font-size: var(--h5);
+    &:hover {
+      transform: scale(1.1);
+    }
+    .moreArrow {
+      font-size: var(--h2);
+      animation: bounce 1s linear 5s 1 normal forwards;
+
+      margin-right: 16px;
+    }
+  }
+}

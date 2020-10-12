@@ -1,42 +1,131 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import styles from "./header.module.scss"
+import iconMap from "./iconMap"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
+import { useLocation } from "@reach/router"
+import useIsMobile from "../hooks/useIsMobile"
+import PropTypes from "prop-types"
+import classnames from "classnames"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
+const THEME_KEY = "data-theme"
+const LIGHT_THEME = "light"
+const DARK_THEME = "dark"
+
+const HeaderLink = ({ title, anchor }) => {
+  // check if the link is selected by accessing the anchor of the url
+  const location = useLocation()
+  const isPageUnderAnchor = location.pathname.split("#")[1] === anchor
+
+  return (
+    <AnchorLink
+      to={`/#${anchor}`}
+      className={classnames(
+        styles.headerLinkWrapper,
+        isPageUnderAnchor && styles.active
+      )}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+      <span>{title}</span>
+      <div className={styles.headerLinkBottomUnder} />
+    </AnchorLink>
+  )
 }
 
-Header.defaultProps = {
-  siteTitle: ``,
+/**
+ * That sun / moon button
+ *
+ * it looks for the keys in localStorage initially, and set the theme accordingly
+ * Whenever it's clicked the theme is toggled
+ */
+const ThemeIcon = () => {
+  const theme = document.documentElement.getAttribute(THEME_KEY) || LIGHT_THEME
+
+  const [themeIcon, setThemeIcon] = React.useState(
+    theme === LIGHT_THEME ? "moon" : "sun"
+  )
+  const changeTheme = newTheme => {
+    localStorage.setItem(THEME_KEY, newTheme)
+    document.documentElement.setAttribute(THEME_KEY, newTheme)
+    setThemeIcon(newTheme === LIGHT_THEME ? "moon" : "sun")
+  }
+  const toggleTheme = () => {
+    theme === LIGHT_THEME ? changeTheme(DARK_THEME) : changeTheme(LIGHT_THEME)
+  }
+
+  React.useEffect(() => {
+    const storedTheme = localStorage.getItem(THEME_KEY)
+    if (!storedTheme) {
+      changeTheme(LIGHT_THEME)
+    } else {
+      changeTheme(storedTheme)
+    }
+  }, [])
+
+  return (
+    <div className={styles.themeButton} onClick={toggleTheme}>
+      <FontAwesomeIcon icon={iconMap[themeIcon]} />
+    </div>
+  )
+}
+
+const BurgerMenu = ({ opened, onClick }) => {
+  return (
+    <div className={styles.burgerMenu} onClick={onClick}>
+      <FontAwesomeIcon
+        icon={opened ? iconMap["burgerClose"] : iconMap["burgerOpen"]}
+      />
+    </div>
+  )
+}
+
+BurgerMenu.propTypes = {
+  opened: PropTypes.bool.isRequired,
+  onClick: PropTypes.func.isRequired,
+}
+
+const HeaderLinkGroup = ({ opened }) => {
+  const isMobile = useIsMobile()
+
+  return (
+    <div
+      className={classnames(
+        styles.headerLinkGroup,
+        isMobile && styles.mobile,
+        opened && styles.opened
+      )}
+    >
+      <HeaderLink title="About" anchor="about" />
+      <HeaderLink title="Experience" anchor="experience" />
+      <HeaderLink title="Education" anchor="education" />
+      <HeaderLink title="Projects" anchor="projects" />
+      <HeaderLink title="Contact" anchor="contact" />
+    </div>
+  )
+}
+
+const Header = () => {
+  const isMobile = useIsMobile()
+
+  const [burgerOpened, setBurgerOpened] = React.useState(false)
+
+  return (
+    <header className={styles.container}>
+      <nav
+        className={classnames(styles.navContainer, isMobile && styles.mobile)}
+      >
+        {isMobile && (
+          <BurgerMenu
+            opened={burgerOpened}
+            onClick={() => setBurgerOpened(!burgerOpened)}
+          />
+        )}
+        <HeaderLinkGroup opened={burgerOpened} />
+        <div className={styles.rightContainer}>
+          <ThemeIcon />
+        </div>
+      </nav>
+    </header>
+  )
 }
 
 export default Header

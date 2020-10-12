@@ -1,15 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  position: fixed;
-  top: 0;
-  left: 0;
-  // A4 size
-  width: 21cm;
-  height: 29.7cm;
-  margin: 0;
 
-  overflow: hidden;
   * {
     font-size: var(--h5);
   }
@@ -28,5 +20,22 @@
         background-color: var(--primary-tint);
       }
     }
+  }
+}
+
+@media print {
+  .container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: calc(attr(page-count) * 29.7cm);
+  }
+
+  .nextPage {
+    page-break-before: always;
+  }
+  @page {
+    size: portrait;
   }
 }

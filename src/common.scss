@@ -1,0 +1,7 @@
+@mixin clickable {
+  cursor: pointer;
+  transition: 0.1s linear transform;
+  &:hover {
+    transform: scale(1.05);
+  }
+}

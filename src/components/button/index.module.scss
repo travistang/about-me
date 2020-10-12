@@ -1,0 +1,43 @@
+@import "../../common.scss";
+
+// common button styles
+.button {
+  @include clickable;
+  @mixin fillColor($color) {
+    color: $color;
+    * {
+      color: $color;
+    }
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // if the icon has span (text) next to it, give it a padding
+  .withPadding {
+    margin-right: 8px;
+  }
+  $recognised-color-class: "primary" "text" "secondary";
+  /* 
+    get color to use based on classname
+  */
+  @each $color-class in $recognised-color-class {
+    $color: var(--#{$color-class});
+
+    &.#{$color-class} {
+      @include fillColor($color);
+      border: 2px solid $color;
+
+      &.fill {
+        background-color: $color;
+        color: var(--text);
+      }
+
+      &:hover {
+        transition: 0.1s linear all;
+        background-color: $color;
+        @include fillColor(var(--background));
+      }
+    }
+  }
+}

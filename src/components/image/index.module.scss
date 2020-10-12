@@ -1,0 +1,47 @@
+@keyframes imageAnimation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes imageTranslation {
+  from {
+    transform: translateX(calc(var(--cover-image-size) / 2));
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.coverImage {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  overflow-x: visible;
+
+  // initial offset
+  div {
+    border-radius: 50% !important;
+    height: var(--cover-image-size);
+    width: var(--cover-image-size);
+    // initial transform
+    animation: imageAnimation 1s ease-in;
+    animation-fill-mode: forwards;
+  }
+
+  &:not(.mobile) {
+    animation: imageAnimation 1s ease-in, imageTranslation 0.5s ease-in-out 1s;
+    animation-fill-mode: forwards;
+    transform: translateX(calc(var(--cover-image-size) / 2));
+    margin-right: var(--page-padding);
+  }
+
+  &.mobile {
+    flex-direction: column;
+  }
+}

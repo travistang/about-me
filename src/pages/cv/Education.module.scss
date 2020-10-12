@@ -1,9 +1,7 @@
 .educationItemContainer {
   display: flex;
   padding-bottom: 32px;
-  .grade {
-    color: var(--text-inverse-dim);
-  }
+
   .dateContainer {
     width: var(--cv-date-column-width);
     line-height: var(--h5);
@@ -28,7 +26,13 @@
       line-height: var(--h5);
     }
     .educationHeader {
-      font-weight: bold;
+      :not(.grade) {
+        font-weight: bold;
+      }
+
+      .grade {
+        padding-top: 4px;
+      }
       line-height: var(--h5);
       margin-bottom: 16px;
       > :not(:last-child):after {

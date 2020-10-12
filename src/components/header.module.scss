@@ -1,0 +1,125 @@
+@import "../common.scss";
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--main-header-height);
+  background-color: var(--background);
+  z-index: 9999;
+  display: flex;
+  .navContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 var(--page-padding);
+    .rightContainer {
+      position: absolute;
+      right: 0;
+      padding: var(--page-padding);
+    }
+
+    &.mobile {
+      justify-content: flex-start;
+    }
+  }
+}
+
+.themeButton {
+  @include clickable;
+}
+
+.headerLinkWrapper {
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+  text-transform: uppercase;
+  font-size: var(--h5);
+  margin: 0 16px;
+  transition: 0.1s linear all;
+  > * {
+    transition: 0.1s linear all;
+  }
+
+  &.active {
+    .headerLinkBottomUnder {
+      display: none;
+    }
+  }
+  .headerLinkBottomUnder {
+    position: absolute;
+    left: 4px;
+    right: 4px;
+    bottom: -2px;
+    height: 2px;
+
+    background-color: var(--text);
+    // initial animation setting
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  &:hover,
+  .active {
+    span {
+      transform: translateY(4px);
+    }
+    .headerLinkBottomUnder {
+      // "expand" animation when hover
+      opacity: 1;
+      transform: scaleX(1);
+    }
+  }
+}
+
+.burgerMenu {
+  // @include clickable;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  transition: 0.1s linear all;
+}
+
+.headerLinkGroup {
+  // desktop version of header link group
+  flex: 1;
+  display: flex;
+  align-items: center;
+
+  &.mobile {
+    // mobile version of headerLink group
+    justify-content: flex-start;
+    background-color: var(--background);
+    position: fixed;
+    top: var(--main-header-height);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    padding: var(--page-padding);
+
+    transition: 0.2s linear all;
+    z-index: var(--overlay-z-index);
+
+    // transform when the menu isn't opened
+    transform: translateX(-200vw);
+    opacity: 0;
+    align-items: flex-start;
+    .headerLinkWrapper {
+      font-size: var(--h4);
+      margin: var(--page-padding) 0;
+      .headerLinkBottomUnder {
+        display: none;
+      }
+      &:hover {
+        transform: translateX(4px);
+      }
+    }
+    &.opened {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}

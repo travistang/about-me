@@ -1,5 +1,6 @@
 type Language implements Node {
   name: String!
+  code: String!
   proficiency: String!
 }
 
@@ -20,6 +21,11 @@ type Intro implements Node {
   summary: String!
   languages: [Language!]!
   skills: [Skill!]!
+  about: [String!]!
+  interests: [String!]!
+
+  home: String!
+  location: String!
 }
 
 type Contact implements Node {
