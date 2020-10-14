@@ -1,0 +1,85 @@
+.timelineContainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--page-padding);
+}
+
+.eventItem {
+  .checkpointContainer {
+    display: flex;
+    align-items: center;
+
+    text-transform: uppercase;
+    font-size: var(--h5);
+    font-weight: bold;
+
+    .checkpoint {
+      width: var(--timeline-point-size);
+      height: var(--timeline-point-size);
+      border-radius: 50%;
+      border: var(--timeline-stroke-width) solid var(--timeline-color);
+      margin-right: var(--page-padding);
+    }
+  }
+  &:last-of-type {
+    .timelineStrokeWithContent > .timeline {
+      opacity: 0;
+    }
+  }
+  &.right {
+    .checkpointContainer {
+      flex-direction: row-reverse;
+      text-align: right;
+      .checkpoint {
+        margin-left: var(--page-padding);
+        margin-right: 0;
+      }
+    }
+    .timelineStrokeWithContent {
+      flex-direction: row-reverse;
+      * {
+        text-align: right !important;
+      }
+
+      .content {
+        margin-right: var(--page-padding);
+        margin-left: 0;
+      }
+    }
+  }
+  .timelineStrokeWithContent {
+    display: flex;
+    .timeline {
+      width: var(--timeline-point-size);
+      display: flex;
+      // place the stroke at the center of the component
+      justify-content: center;
+      .timelineStroke {
+        width: var(--timeline-stroke-width);
+        height: 100%;
+        background-color: var(--timeline-color);
+      }
+    }
+
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      margin-left: var(--page-padding);
+
+      .title {
+        font-weight: bold;
+        font-size: var(--h4);
+      }
+
+      .subtitle {
+        font-size: var(--h5);
+        text-transform: uppercase;
+      }
+      .description {
+        text-align: justify;
+        padding: var(--page-padding) 0 calc(3 * var(--page-padding));
+      }
+    }
+  }
+}

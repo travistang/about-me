@@ -6,6 +6,8 @@ import { SectionVisibilityContextProvider } from "../contexts/SectionVisibilityC
 
 import styles from "./index.module.scss"
 import AboutSection from "../components/about"
+import ExperienceSection from "../components/experiences"
+import EducationSection from "../components/education"
 
 const IndexPage = () => {
   return (
@@ -14,6 +16,8 @@ const IndexPage = () => {
         <Header />
         <Cover />
         <AboutSection />
+        <ExperienceSection />
+        <EducationSection />
       </div>
     </SectionVisibilityContextProvider>
   )

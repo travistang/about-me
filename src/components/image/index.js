@@ -9,7 +9,7 @@ import classnames from "classnames"
 const Image = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+      placeholderImage: file(relativePath: { eq: "icon.JPG" }) {
         childImageSharp {
           fixed(width: 300) {
             ...GatsbyImageSharpFixed

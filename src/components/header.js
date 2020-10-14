@@ -3,7 +3,6 @@ import styles from "./header.module.scss"
 import iconMap from "./iconMap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
-import { useLocation } from "@reach/router"
 import { SectionVisibilityContext } from "../contexts/SectionVisibilityContext"
 
 import useIsMobile from "../hooks/useIsMobile"

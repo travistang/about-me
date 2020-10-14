@@ -17,9 +17,9 @@
     },
     {
       "institude": "The Hong Kong University of Science and Technology",
-      "degree": "B.Eng. in Computer Science",
+      "degree": "B.Eng. Computer Science",
       "startDate": "9/2013",
-      "endDate": "5/2017",
+      "endDate": "9/2017",
       "description": "A 4-year Bachelor degree covering foundamentals of computer science (Informatics)",
       "grade": "Second Class Honors (Division I)",
       "thesis": "Image-based Reinforcement Learning for Autonomous Vechicles"

@@ -5,9 +5,13 @@
   background-color: var(--background);
 
   display: flex;
-  &.fullPage {
+  flex-direction: column;
+  &.fullPage:not(:first-of-type) {
     min-height: 100vh;
-    padding-top: var(--name-header-height);
+    // if it's not the first section, put some paddings at the top so that the title will be seen when anchors are clicked
+    &:not(:first-of-type) {
+      padding-top: var(--name-header-height);
+    }
   }
   .title {
     font-size: var(--h3);
