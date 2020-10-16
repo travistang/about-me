@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[19],{"6hO/":function(n,e,t){"use strict";t.r(e);var a=t("q1tI"),r=t.n(a),u=t("Wbzz"),m=t("hUj7"),s=t.n(m);e.default=function(){var n=Object(u.useStaticQuery)("2899373583");return r.a.createElement("p",{className:s.a.summary},n.content.intro.summary)}},hUj7:function(n,e,t){n.exports={summary:"Summary-module--summary--3enFY"}}}]);
+//# sourceMappingURL=component---src-pages-cv-summary-js-d9cad6446bbdf8a280de.js.map
