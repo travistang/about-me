@@ -3,9 +3,9 @@
 :root {
   --mobile-breakpoint: 768px;
 
-  // --primary: #053c5e;
-  --primary: #1f7a8c;
-  --primary-tint: #bfdbf7;
+  --primary-rgb: 0, 49, 83;
+  --primary: rgb(var(--primary-rgb));
+  --primary-tint: #ccd6e0;
   --text: #3f3f3f;
 
   --text-inverse: #eeeeee;
