@@ -2,7 +2,7 @@
   min-height: 25vh;
   border-top: 1px solid var(--text-inverse);
   align-items: center;
-  flex-direction: row;
+  flex-direction: row !important;
   justify-content: space-between;
 
   &.mobile {

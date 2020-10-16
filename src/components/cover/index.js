@@ -38,7 +38,13 @@ const Cover = () => {
             title="Resume"
             color="primary"
             className={styles.cvButton}
-            onClick={() => navigate("/cv/")}
+            onClick={() =>
+              navigate(
+                `${
+                  process.env.NODE_ENV === "production" ? "/about-me" : ""
+                }/cv/`
+              )
+            }
           />
         </div>
       </div>

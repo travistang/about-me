@@ -1,7 +1,6 @@
 import React from "react"
 import { Icon } from "@iconify/react"
 import { IconifyIcons as iconMap } from "../iconMap"
-import ReactTooltip from "react-tooltip"
 import PropTypes from "prop-types"
 
 const TechIcon = ({ tech }) =>

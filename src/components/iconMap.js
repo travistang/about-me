@@ -13,6 +13,7 @@ import {
   faMusic,
   faBicycle,
   faCopyright,
+  faBomb,
 } from "@fortawesome/free-solid-svg-icons"
 import {
   faGithub,
@@ -84,6 +85,9 @@ export default {
   python: faPython,
   node: faNode,
   copyright: faCopyright,
+
+  // 404
+  notFound: faBomb,
 }
 
 export const IconifyIcons = {
