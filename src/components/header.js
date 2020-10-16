@@ -38,7 +38,10 @@ const HeaderLink = ({ title, anchor }) => {
  * Whenever it's clicked the theme is toggled
  */
 const ThemeIcon = () => {
-  const theme = document.documentElement.getAttribute(THEME_KEY) || LIGHT_THEME
+  const theme =
+    (typeof document !== "undefined"
+      ? document.documentElement.getAttribute(THEME_KEY)
+      : LIGHT_THEME) || LIGHT_THEME
 
   const [themeIcon, setThemeIcon] = React.useState(
     theme === LIGHT_THEME ? "moon" : "sun"

@@ -1,9 +1,7 @@
 import { useMedia } from "use-media"
 
 const useIsMobile = () => {
-  const breakpoint = getComputedStyle(
-    document.documentElement
-  ).getPropertyValue("--mobile-breakpoint")
+  const breakpoint = 768
 
   const isMobile = useMedia({ maxWidth: breakpoint })
 

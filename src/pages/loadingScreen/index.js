@@ -3,10 +3,8 @@ import styles from "./index.module.scss"
 import ReactLoading from "react-loading"
 
 const LoadingScreen = () => {
-  const getAttribute = attrName =>
-    getComputedStyle(document.documentElement).getPropertyValue(attrName)
-  const componentSize = getAttribute("--loading-component-size")
-  const componentColor = getAttribute("--loading-overlay-color")
+  const componentSize = "64px"
+  const componentColor = "rgba(14, 14, 14, 0.2)"
   return (
     <div className={styles.container}>
       <ReactLoading
