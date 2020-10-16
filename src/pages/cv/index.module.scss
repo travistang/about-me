@@ -17,7 +17,7 @@
       width: var(--cv-summary-width);
       background-color: var(--primary-tint);
       * {
-        background-color: var(--primary-tint);
+        background-color: var(--primary-tint) !important;
       }
     }
   }
