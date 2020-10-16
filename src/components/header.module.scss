@@ -44,9 +44,6 @@
   }
 
   &.active {
-    * {
-      color: var(--primary);
-    }
     .headerLinkBottomUnder {
       display: none;
     }
@@ -122,6 +119,10 @@
     .headerLinkWrapper {
       font-size: var(--h4);
       margin: var(--page-padding) 0;
+      * {
+        // don't highlight the tab when its on mobile
+        color: var(--text);
+      }
       .headerLinkBottomUnder {
         display: none;
       }

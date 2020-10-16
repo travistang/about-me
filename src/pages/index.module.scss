@@ -90,3 +90,13 @@ html {
 a {
   text-decoration: none;
 }
+
+.tooltip {
+  background-color: var(--secondary) !important;
+  color: var(--text) !important;
+  font-weight: bold;
+  &::after {
+    // the tip's color
+    border-top-color: var(--secondary) !important;
+  }
+}

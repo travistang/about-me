@@ -11,8 +11,9 @@ const Image = () => {
     query {
       placeholderImage: file(relativePath: { eq: "icon.JPG" }) {
         childImageSharp {
-          fixed(width: 300, quality: 90) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 300, quality: 100) {
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }
@@ -21,7 +22,7 @@ const Image = () => {
 
   const isMobile = useIsMobile()
 
-  if (!data?.placeholderImage?.childImageSharp?.fixed) {
+  if (!data?.placeholderImage?.childImageSharp?.fluid) {
     return <LoadingScreen />
   }
 
@@ -29,7 +30,7 @@ const Image = () => {
     <div className={classnames(styles.coverImage, isMobile && styles.mobile)}>
       <Img
         loading="eager"
-        fixed={data.placeholderImage.childImageSharp.fixed}
+        fluid={data.placeholderImage.childImageSharp.fluid}
       />
     </div>
   )

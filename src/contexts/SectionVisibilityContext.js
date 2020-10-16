@@ -12,18 +12,18 @@ export const SectionVisibilityContextProvider = ({ children }) => {
   const [rawContextValue, setContextValue] = React.useState(
     initialVisibilityContextValue
   )
-  const { visibleSections: previousVisibleSections = [] } = rawContextValue
   /**
    * Prepare reducers (computed context value)
    */
+  const getNewVisibilitySections = (newSection, isVisible) => {
+    if (isVisible) return [newSection]
+  }
   const contextValue = {
     ...rawContextValue,
     onChangeVisibileSection: (newSection, isVisible) =>
       setContextValue({
         ...rawContextValue,
-        visibileSections: isVisible
-          ? [...previousVisibleSections, newSection]
-          : previousVisibleSections.filter(sec => sec !== newSection),
+        visibileSections: getNewVisibilitySections(newSection, isVisible),
       }),
   }
   return (

@@ -13,7 +13,7 @@ const THEME_KEY = "data-theme"
 const LIGHT_THEME = "light"
 const DARK_THEME = "dark"
 
-const HeaderLink = ({ title, anchor }) => {
+const HeaderLink = ({ title, anchor, onClick }) => {
   // check if the link is selected by accessing the anchor of the url
   const { visibileSections } = React.useContext(SectionVisibilityContext)
 
@@ -25,8 +25,10 @@ const HeaderLink = ({ title, anchor }) => {
         anchor === visibileSections?.[0] && styles.active
       )}
     >
-      <span>{title}</span>
-      <div className={styles.headerLinkBottomUnder} />
+      <div onClick={onClick}>
+        <span>{title}</span>
+        <div className={styles.headerLinkBottomUnder} />
+      </div>
     </AnchorLink>
   )
 }
@@ -86,7 +88,7 @@ BurgerMenu.propTypes = {
   onClick: PropTypes.func.isRequired,
 }
 
-const HeaderLinkGroup = ({ opened }) => {
+const HeaderLinkGroup = ({ opened, onSelected }) => {
   const isMobile = useIsMobile()
 
   return (
@@ -97,11 +99,11 @@ const HeaderLinkGroup = ({ opened }) => {
         opened && styles.opened
       )}
     >
-      <HeaderLink title="About" anchor="about" />
-      <HeaderLink title="Experience" anchor="experience" />
-      <HeaderLink title="Education" anchor="education" />
-      <HeaderLink title="Projects" anchor="projects" />
-      <HeaderLink title="Contact" anchor="contact" />
+      <HeaderLink onClick={onSelected} title="About" anchor="about" />
+      <HeaderLink onClick={onSelected} title="Experience" anchor="experience" />
+      <HeaderLink onClick={onSelected} title="Education" anchor="education" />
+      <HeaderLink onClick={onSelected} title="Projects" anchor="projects" />
+      <HeaderLink onClick={onSelected} title="Contact" anchor="contact" />
     </div>
   )
 }
@@ -111,6 +113,7 @@ const Header = () => {
 
   const [burgerOpened, setBurgerOpened] = React.useState(false)
 
+  const closeMenu = () => setBurgerOpened(false)
   return (
     <header className={styles.container}>
       <nav
@@ -122,15 +125,12 @@ const Header = () => {
             onClick={() => setBurgerOpened(!burgerOpened)}
           />
         )}
-        <HeaderLinkGroup opened={burgerOpened} />
+        <HeaderLinkGroup opened={burgerOpened} onSelected={closeMenu} />
         <div className={styles.rightContainer}>
           <ThemeIcon />
         </div>
         {isMobile && burgerOpened && (
-          <div
-            className={styles.overlay}
-            onClick={() => setBurgerOpened(false)}
-          />
+          <div className={styles.overlay} onClick={closeMenu} />
         )}
       </nav>
     </header>

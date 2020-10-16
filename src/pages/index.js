@@ -15,7 +15,7 @@ import ContactSection from "../components/contact"
 const IndexPage = () => {
   return (
     <SectionVisibilityContextProvider>
-      <ReactTooltip />
+      <ReactTooltip effect="solid" className={styles.tooltip} />
       <div className={styles.container}>
         <Header />
         <Cover />

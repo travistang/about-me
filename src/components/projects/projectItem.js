@@ -3,11 +3,14 @@ import styles from "./projectItem.module.scss"
 import PropTypes from "prop-types"
 import { IconifyIcons as iconMap } from "../iconMap"
 import TechIcon from "../techIcon"
+import useIsMobile from "../../hooks/useIsMobile"
+import classnames from "classnames"
 
 const ProjectItem = ({ name, date, onGoing, tech, url, synopsis }) => {
+  const isMobile = useIsMobile()
   return (
     <div
-      className={styles.container}
+      className={classnames(styles.container, isMobile && styles.mobile)}
       onClick={() => window.open(url, "_blank")}
     >
       <div className={styles.name}>
