@@ -76,6 +76,7 @@ type Education implements Node {
 type Content implements Node {
   intro: Intro!
   contacts: [Contact!]!
+  projectSynopsis: String!
   projects: [Project!]!
   experiences: [Experience!]!
   education: [Education!]!

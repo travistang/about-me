@@ -3,8 +3,8 @@
 :root {
   --mobile-breakpoint: 768px;
 
-  --primary: #053c5e;
-  --primary-highlight: #1f7a8c;
+  // --primary: #053c5e;
+  --primary: #1f7a8c;
   --primary-tint: #bfdbf7;
   --text: #3f3f3f;
 
@@ -51,7 +51,7 @@
   --timeline-color: var(--primary);
   // loading screen
   --loading-component-size: 64px;
-  --loading-overlay-color: rgba(#eeeeee, 0.2);
+  --loading-overlay-color: rgba(14, 14, 14, 0.2);
 }
 
 [data-theme="dark"] {
@@ -60,10 +60,11 @@
   --background: #222831;
   --text: #eeeeee;
 
-  --text-inverse: #222831;
-  --text-inverse-dim: lighten(#222831, 30%);
+  --text-inverse-rgb: 34, 40, 49;
+  --text-inverse: rgb(var(--text-inverse-rgb));
+  --text-inverse-dim: lighten(var(--text-inverse-rgb), 30%);
 
-  --loading-overlay-color: rgba(#222831, 0.2);
+  // --loading-overlay-color: rgba(var(--text-inverse-rgb), 0.8);
 }
 
 html {

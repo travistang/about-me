@@ -1,0 +1,52 @@
+@import "../../common.scss";
+
+.container {
+  @include clickable;
+  border: 1px solid var(--text);
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  padding: var(--page-padding);
+  margin: var(--page-padding);
+  background-color: var(--text);
+  * {
+    color: var(--background);
+  }
+
+  .name {
+    font-weight: bold;
+    font-size: var(--h3);
+    display: flex;
+    align-items: center;
+  }
+
+  .date {
+    text-transform: uppercase;
+    padding-top: calc(var(--page-padding) / 2);
+    font-size: var(--h5);
+  }
+
+  .techStack {
+    padding: var(--page-padding) 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 16px);
+    grid-auto-columns: min-content;
+    column-gap: var(--page-padding);
+  }
+
+  .synopsis {
+    text-align: justify;
+    overflow: scroll;
+  }
+}
+
+.onGoing {
+  background: var(--secondary);
+  text-transform: uppercase;
+  font-size: var(--h5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 var(--page-padding);
+  width: 84px;
+}

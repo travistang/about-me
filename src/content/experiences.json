@@ -7,7 +7,7 @@
       "categories": ["FE"],
       "startDate": "4/2020",
       "endDate": "10/2020",
-      "technologies": ["React.js"],
+      "technologies": ["React", "Redux", "Typescript", "Flask"],
       "synopsis": "Develop various web applications with React.js, following the Scrum process.",
       "tasks": [
         "Develop various web applications with React with sophisticated data structure and business logic.",
@@ -22,7 +22,14 @@
       "categories": ["ML", "BE"],
       "startDate": "4/2019",
       "endDate": "4/2020",
-      "technologies": ["Flask", "Tensorflow", "OpenCV", "ARKit"],
+      "technologies": [
+        "Flask",
+        "Tensorflow",
+        "OpenCV",
+        "ARKit",
+        "Swift",
+        "cpp"
+      ],
       "tasks": [
         "Develop algorithms for constructing 3D model from data provided by ARKit",
         "Develop servers for storing and communicating between iOS apps and Python clients for visualization"
@@ -36,7 +43,7 @@
       "categories": ["FE", "BE"],
       "startDate": "1/2019",
       "endDate": "7/2019",
-      "technologies": ["Express.js", "Mongoose", "React.js"],
+      "technologies": ["Nodejs", "Mongodb", "React"],
       "tasks": [
         "Build a prototype of a online platform which facilitates communication between politicians and students with MERN stack",
         "All common authenication and account management actions implemented: Login / Register account, email confirmation and reset password"
@@ -50,7 +57,7 @@
       "startDate": "10/2018",
       "categories": ["IOT", "BE"],
       "endDate": "1/2019",
-      "technologies": ["Flask", "ESP8266", "Raspberry Pi", " Micropython"],
+      "technologies": ["Flask", "ESP8266", "Raspberry Pi", " python"],
       "tasks": [
         "Program several embedded devices to broadcast the readings of their sensors to a server",
         "Program a server that conforms to the Web of Things (WoT) protocol, as well as communicating with several devices through MQTT."
@@ -64,7 +71,7 @@
       "startDate": "10/2018",
       "categories": ["FE", "BE"],
       "endDate": "4/2019",
-      "technologies": ["Swift", "ARKit", "WebRTC", "flask", "express.js"],
+      "technologies": ["Swift", "ARKit", "WebRTC", "flask", "nodejs"],
       "tasks": [
         "Develop a real-time video call application on iOS with AR-Powered features, including 3D Drawing, eye tracking, goal-seeking with AR markers.",
         "The app aims to facilitate communication and enchance collaboration between engineers on field and remote experts.",
@@ -80,7 +87,7 @@
       "endDate": "5/2018",
       "categories": ["FE"],
 
-      "technologies": ["Vue"],
+      "technologies": ["Vue", "Firebase"],
       "tasks": [
         "Develop a dashboard for displaying locations of bike stations as well as route planning",
         "Requires project completion in a severe time constraint"

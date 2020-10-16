@@ -1,0 +1,11 @@
+.projectSynopsis {
+  text-align: justify;
+  padding: var(--page-padding);
+  &::first-letter {
+    padding-left: var(--page-padding);
+  }
+}
+.projectListContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}

@@ -1,7 +1,7 @@
 import React from "react"
 
 const initialVisibilityContextValue = {
-  visibileSection: "",
+  visibileSections: [],
   onChangeVisibileSection: () => {},
 }
 export const SectionVisibilityContext = React.createContext(
@@ -12,15 +12,18 @@ export const SectionVisibilityContextProvider = ({ children }) => {
   const [rawContextValue, setContextValue] = React.useState(
     initialVisibilityContextValue
   )
+  const { visibleSections: previousVisibleSections = [] } = rawContextValue
   /**
    * Prepare reducers (computed context value)
    */
   const contextValue = {
     ...rawContextValue,
-    onChangeVisibileSection: newSection =>
+    onChangeVisibileSection: (newSection, isVisible) =>
       setContextValue({
         ...rawContextValue,
-        visibileSection: newSection,
+        visibileSections: isVisible
+          ? [...previousVisibleSections, newSection]
+          : previousVisibleSections.filter(sec => sec !== newSection),
       }),
   }
   return (

@@ -15,14 +15,14 @@ const DARK_THEME = "dark"
 
 const HeaderLink = ({ title, anchor }) => {
   // check if the link is selected by accessing the anchor of the url
-  const { visibileSection } = React.useContext(SectionVisibilityContext)
+  const { visibileSections } = React.useContext(SectionVisibilityContext)
 
   return (
     <AnchorLink
       to={`/#${anchor}`}
       className={classnames(
         styles.headerLinkWrapper,
-        anchor === visibileSection && styles.active
+        anchor === visibileSections?.[0] && styles.active
       )}
     >
       <span>{title}</span>
@@ -123,6 +123,12 @@ const Header = () => {
         <div className={styles.rightContainer}>
           <ThemeIcon />
         </div>
+        {isMobile && burgerOpened && (
+          <div
+            className={styles.overlay}
+            onClick={() => setBurgerOpened(false)}
+          />
+        )}
       </nav>
     </header>
   )

@@ -20,7 +20,9 @@ const Section = ({ children, title, fullPage, className, anchor = "" }) => {
         className
       )}
     >
-      <VisibilitySensor onChange={() => onChangeVisibileSection(anchor)}>
+      <VisibilitySensor
+        onChange={isVisible => onChangeVisibileSection(anchor, isVisible)}
+      >
         <>
           {title && <div className={styles.title}>{title}</div>}
           {children}

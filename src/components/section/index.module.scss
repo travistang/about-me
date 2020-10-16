@@ -6,12 +6,12 @@
 
   display: flex;
   flex-direction: column;
+  &:not(:first-of-type) {
+    padding-top: var(--name-header-height);
+  }
   &.fullPage:not(:first-of-type) {
     min-height: 100vh;
     // if it's not the first section, put some paddings at the top so that the title will be seen when anchors are clicked
-    &:not(:first-of-type) {
-      padding-top: var(--name-header-height);
-    }
   }
   .title {
     font-size: var(--h3);

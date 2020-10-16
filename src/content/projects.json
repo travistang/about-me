@@ -1,21 +1,37 @@
 {
+  "projectSynopsis": "I spend much of my free time building softwares and stuffs - For leisure, for fun, for being useful... for different reasons. Some of the projects are listed below.",
   "projects": [
+    {
+      "name": "About Me (This website)",
+      "date": "Oct 2020",
+      "tech": ["React", "Gatsby", "GraphQL"],
+      "url": "https://github.com/travistang/about-me",
+      "synopsis": "A revamp of my previous website, featuring the use of Gatsby, GraphQL, CSS animations, transitions and variables and theming."
+    },
     {
       "name": "SciCom",
       "date": "Jan 2019 - Jul 2019",
       "onGoing": false,
       "includeInCV": true,
-      "tech": ["React", "MongoDB", "Nodemailer", "express.js", "docker", "AWS"],
-      "url": "https://www.sci-com.org",
-      "synopsis": "My first complete full-stack project that is put into production and serve real clients by facilitating communication between local politicians and students. Being originally a task during my work as a HiWi for TUM: Junge Akademie, I am responsible for developing both the frontend web application as well as the code on an AWS server that is capable to do a wide range of common tasks, such as email verification, account creation and interacting with other entities, search function and password reset etc. Source code can be found at: https://github.com/travistang/SciCom"
+      "tech": [
+        "React",
+        "node",
+        "MongoDB",
+        "Nodemailer",
+        "express.js",
+        "docker",
+        "AWS"
+      ],
+      "url": "https://github.com/travistang/SciCom",
+      "synopsis": "My first complete full-stack project that is put into production and serve real clients. It is used to facilitate communication between local politicians and students."
     },
     {
-      "name": "Inventory",
-      "date": "Mar 2019",
-      "onGoing": true,
+      "name": "Inventory (V2)",
+      "date": "Dec 2019",
+      "onGoing": false,
       "includeInCV": true,
-      "tech": "React-native",
-      "url": "https://github.com/travistang/Inventory",
+      "tech": ["React", "GraphQL"],
+      "url": "https://github.com/travistang/Inventory-v2",
       "synopsis": "An app that tracks surplus of your accounts (different currencies, cash or in bank), what and how much you have bought and how much of them are left. This is my first attempt to systematically keep track on where my money has gone, and to ultimately predict my account balance with current trend or some hypothetical changes in habits."
     },
     {
@@ -23,13 +39,12 @@
       "date": "Jan 2018",
       "onGoing": false,
       "includeInCV": false,
-      "tech": ["Keras", "OpenAI Gym"],
+      "tech": ["Python", "Keras", "OpenAI Gym"],
       "url": "https://github.com/travistang/IN2346-Porject",
-      "cvSynopsis": "Neural Turing Machine implementation with Keras Backend",
-      "synopsis": "This is the project my friend and I worked on for the course Introduction to Deep Learning (IN2346) at TUM.In this project we compare the performance of 3 different neural networks on learning to play Atari games (Breakout),namely, a simple CNN, RNN (LSTM) and the Neural Turing Machine.Our finding is that the simple CNN performs the best (by that I mean it gives the highest score given the same amount of time of training)and one of the explanations is that the other two networks contain much more parameters that they take more time and 'experiences' to learn.This project also features an implementation of NTM with Keras backend from scratch. Which is, for me,a very good practice for building computational graph."
+      "synopsis": "Using self-implemented Neural Turing Machine with Keras to investigate the performance of several agents in Atari games"
     },
     {
-      "name": "Personal Website",
+      "name": "Personal Website (About)",
       "cvName": "Personal website",
       "date": "Aug 2018",
       "onGoing": false,
@@ -37,17 +52,16 @@
       "tech": ["React", "React-scroll", "React-reveal"],
       "url": "https://travistang.github.io/about/",
       "cvUrl": "travistang.github.io/about/",
-      "synopsis": "The website I use to present myself.",
-      "cvSynopsis": "A personal website written in React"
+      "synopsis": "The website I use to present myself. Built with react and hosted on Github pages and is eventually replaced by the website you are looking at."
     },
     {
       "name": "MVGDashboard",
       "date": "Jul 2018",
-      "onGoing": true,
+      "onGoing": false,
       "includeInCV": true,
       "tech": ["Electron", "React", "Redux", "Redux-Saga", "Cheerio"],
       "url": "https://github.com/travistang/MVGDashboard",
-      "synopsis": "An electron application that displays the departure time and time to destination from your location(I bet MVV and MVG won't like it...).This is planned to be run on a Raspberry Pi and put in a common kitchen so every flatmates of mine can make use of it.I plan to integrate other features to make it even more personalized.Details are unfortunately a secret for now,but you will definitely see in the future.",
+      "synopsis": "An electron application that displays the departure time and time to destination from your location.",
       "cvSynopsis": "A realtime dashboard written in React, Redux and Redux-Saga"
     },
     {
@@ -55,26 +69,9 @@
       "date": "Sep 2017",
       "onGoing": false,
       "includeInCV": false,
-      "tech": ["Scrapy", "Crontab", "Parse"],
+      "tech": ["python", "Scrapy", "Crontab", "Parse"],
       "url": "https://github.com/travistang/wg-crawler",
-      "synopsis": "A web scraper that periodically visit some housing ads websites,get new offers and send a user-defined email to the landlord.Motivation of this project definitely comes from the difficult housing situation in Munich.I spent a few days to build this crawler immediately after I arrived at the city.Afterwards I use it to contact landlords and improve it meanwhile.Some time later I indeed got an offer from it, which turns out to be where I am living at now."
-    },
-    {
-      "name": "YoutubeDownloader",
-      "date": "Mar 2018",
-      "tech": [
-        "Ionic 2",
-        "Express",
-        "Docker",
-        "Kue",
-        "MongoDB",
-        "RabbitMQ",
-        "Youtube-dl"
-      ],
-      "onGoing": true,
-      "includeInCV": false,
-      "url": "https://github.com/travistang/YoutubeDownloader",
-      "synopsis": "Another piece of work that challenges the TOS  It is used to coorperate with a Node-based backend to download video (more precisely, audios from YouTube to your mobile devices for playing offline. Due to technical challenges from the Ionic side this project has been stuck for a few months, but I can assure you that it will be completed for the foreseeable future."
+      "synopsis": "A web scraper that periodically visit some housing ads websites, get new offers and send a user-defined email to the landlord. I have indeed found a new place in Munich using this tool."
     }
   ]
 }

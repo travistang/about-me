@@ -1,1 +1,12 @@
-
+.subtitleContainer {
+  display: flex;
+  flex-direction: column;
+  .techs {
+    margin-left: -4px;
+    padding-top: 4px;
+    * {
+      font-size: var(--h4);
+      margin: 4px;
+    }
+  }
+}
