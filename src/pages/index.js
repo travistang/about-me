@@ -1,5 +1,6 @@
 import React from "react"
 
+import SEO from "../components/seo"
 import Header from "../components/header"
 import Cover from "../components/cover"
 import { SectionVisibilityContextProvider } from "../contexts/SectionVisibilityContext"
@@ -15,6 +16,7 @@ import ContactSection from "../components/contact"
 const IndexPage = () => {
   return (
     <SectionVisibilityContextProvider>
+      <SEO />
       <ReactTooltip effect="solid" className={styles.tooltip} />
       <div className={styles.container}>
         <Header />

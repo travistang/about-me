@@ -8,6 +8,12 @@
       padding-left: var(--page-padding);
     }
   }
+
+  &.mobile {
+    .languageSection > .content {
+      grid-template-columns: 1fr;
+    }
+  }
 }
 
 .subsection {

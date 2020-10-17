@@ -7,6 +7,7 @@ import iconMap from "../iconMap"
 import ReactCountryFlag from "react-country-flag"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import classnames from "classnames"
+import useIsMobile from "../../hooks/useIsMobile"
 
 const Subsection = ({ title, children, className }) => (
   <div className={classnames(styles.subsection, className)}>
@@ -42,6 +43,7 @@ InterestItem.propTypes = {
 }
 
 const AboutSection = () => {
+  const isMobile = useIsMobile()
   const data = useStaticQuery(graphql`
     query aboutSectionData {
       content {
@@ -61,7 +63,7 @@ const AboutSection = () => {
     <Section
       title="About me"
       anchor="about"
-      className={styles.container}
+      className={classnames(styles.container, isMobile && styles.mobile)}
       fullPage
     >
       <Subsection>

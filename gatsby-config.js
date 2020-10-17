@@ -3,8 +3,8 @@ const path = require("path")
 module.exports = {
   pathPrefix: "/about-me",
   siteMetadata: {
-    title: `About Me`,
-    description: `Travis' Homepage`,
+    title: `Hi, I'm Travis!`,
+    description: `Welcome to my homepage!`,
     author: `Travis Tnag`,
   },
   plugins: [

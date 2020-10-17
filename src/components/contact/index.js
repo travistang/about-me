@@ -32,7 +32,7 @@ const ContactItem = ({ value, icon, name }) => {
   )
 }
 
-const ContactWrapper = ({ contacts }) => {
+const ContactWrapper = () => {
   const isMobile = useIsMobile()
 
   const data = useStaticQuery(graphql`

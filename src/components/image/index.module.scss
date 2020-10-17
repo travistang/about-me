@@ -23,7 +23,6 @@
   flex: 1;
   justify-content: flex-end;
   overflow-x: visible;
-
   // initial offset
   div {
     border-radius: 50% !important;
@@ -43,5 +42,9 @@
 
   &.mobile {
     flex-direction: column;
+    div {
+      height: var(--cover-image-size-mobile);
+      width: var(--cover-image-size-mobile);
+    }
   }
 }

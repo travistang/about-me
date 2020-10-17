@@ -25,6 +25,12 @@
       height: var(--h3);
       width: var(--h3);
     }
+    &.mobile {
+      svg {
+        height: var(--h4);
+        width: var(--h4);
+      }
+    }
   }
 
   .footer {
