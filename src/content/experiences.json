@@ -74,10 +74,10 @@
       "technologies": ["Swift", "ARKit", "WebRTC", "flask", "nodejs"],
       "tasks": [
         "Develop a real-time video call application on iOS with AR-Powered features, including 3D Drawing, eye tracking, goal-seeking with AR markers.",
-        "The app aims to facilitate communication and enchance collaboration between engineers on field and remote experts.",
+        "The app aims to facilitate communication and enhance collaboration between engineers on field and remote experts.",
         "Scrum process being followed: Regular sprints, standups, code review and client meetings"
       ],
-      "synopsis": "A practical course in which our team follows the scrum development pattern throughour the semester to create a video call iOS app with several Augmented Reality features."
+      "synopsis": "A practical course in which our team follows the scrum development pattern throughout the semester to create a video call iOS app with several Augmented Reality features."
     },
     {
       "company": "Masterson",
