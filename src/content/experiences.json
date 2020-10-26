@@ -46,7 +46,7 @@
       "technologies": ["Nodejs", "Mongodb", "React"],
       "tasks": [
         "Build a prototype of a online platform which facilitates communication between politicians and students with MERN stack",
-        "All common authenication and account management actions implemented: Login / Register account, email confirmation and reset password"
+        "All common authentication and account management actions are implemented: Login / Register account, email confirmation and reset password"
       ],
       "synopsis": "My task is to develop a web platform that enables politicians and students to communicate and participate in different project."
     },
