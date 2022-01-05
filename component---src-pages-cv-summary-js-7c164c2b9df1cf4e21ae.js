@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkabout_me=self.webpackChunkabout_me||[]).push([[565],{4936:function(e,t,u){u.r(t),u.d(t,{default:function(){return r}});var a=u(7294),n=u(5444),r=function(){var e=(0,n.useStaticQuery)("2899373583");return a.createElement("p",{className:"Summary-module--summary--AtHZ+"},e.content.intro.summary)}}}]);
+//# sourceMappingURL=component---src-pages-cv-summary-js-7c164c2b9df1cf4e21ae.js.map
