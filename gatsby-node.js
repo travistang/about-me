@@ -7,7 +7,7 @@ const fs = require("fs")
 const yaml = require("js-yaml")
 
 const contentPath = "./src/content"
-exports.sourceNodes = ({ actions }) => {
+exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   // create types
   const typedefs = fs.readFileSync(`${contentPath}/typedefs.graphql`, "utf-8")
