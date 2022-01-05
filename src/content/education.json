@@ -4,6 +4,7 @@
       "institude": "Technical University of Munich",
       "degree": "M.Sc. Informatics",
       "startDate": "10/2017",
+      "endDate": "05/2021",
       "description": "Focus on Computer Vision and Machine Learning, as well as software engineering and related application area.",
       "courses": [
         "Deep Learning for Computer Vision",
@@ -13,7 +14,8 @@
         "Robot Motion Planning",
         "Cyber-Physical Systems"
       ],
-      "grade": "1.73 (81.75%) as of Oct 2020"
+      "thesis": "Self-supervised Novel View Image Synthesis for Improving Performance of Autonomous Driving Algorithm",
+      "grade": "1.72/1 (82%)"
     },
     {
       "institude": "The Hong Kong University of Science and Technology",

@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./index.module.scss"
+import * as styles from "./index.module.scss"
 import { useLocation } from "@reach/router"
 import NameSection from "./NameSection"
 import Contact from "./Contact"

@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
-import styles from "./index.module.scss"
+import * as styles from "./index.module.scss"
 import Section from "../section"
 import iconMap from "../iconMap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -67,7 +67,7 @@ const ContactSection = () => {
         <div className={styles.logo}> Travis' Homepage</div>
         {isMobile && <ContactWrapper />}
         <div>
-          Copyright <FontAwesomeIcon icon={iconMap.copyright} /> 2020 Tang Yiu
+          Copyright <FontAwesomeIcon icon={iconMap.copyright} /> 2021 Tang Yiu
           Ting. All rights reserved.
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./index.module.scss"
+import * as styles from "./index.module.scss"
 import classnames from "classnames"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import iconMap from "../iconMap"
@@ -7,7 +7,7 @@ import PropTypes from "prop-types"
 
 const Button = ({ title, onClick, icon, className, type, color = "text" }) => {
   return (
-    <div
+    <button
       className={classnames(
         styles.button,
         color && styles[color],
@@ -21,7 +21,7 @@ const Button = ({ title, onClick, icon, className, type, color = "text" }) => {
         className={icon && title && styles.withPadding}
       />
       {title && <span>{title}</span>}
-    </div>
+    </button>
   )
 }
 

@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import classnames from "classnames"
 import VisibilitySensor from "react-visibility-sensor"
 import { SectionVisibilityContext } from "../../contexts/SectionVisibilityContext"
-import styles from "./index.module.scss"
+import * as styles from "./index.module.scss"
 
 /**
  * Represent a section component that occupies the the whole page

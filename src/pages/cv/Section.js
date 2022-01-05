@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./Section.module.scss"
+import * as styles from "./Section.module.scss"
 import classnames from "classnames"
 
 const Section = ({ title, children, className }) => {

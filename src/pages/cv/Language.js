@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Section from "./Section"
-import styles from "./Language.module.scss"
+import * as styles from "./Language.module.scss"
 
 const Language = () => {
   const data = useStaticQuery(graphql`

@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Section from "../section"
 import ProjectItem from "./projectItem"
-import styles from "./index.module.scss"
+import * as styles from "./index.module.scss"
 import classnames from "classnames"
 import useIsMobile from "../../hooks/useIsMobile"
 const ProjectSection = () => {

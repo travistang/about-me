@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import styles from "./index.module.scss"
+import * as styles from "./index.module.scss"
 import LoadingScreen from "../../pages/loadingScreen"
 import useIsMobile from "../../hooks/useIsMobile"
 import classnames from "classnames"

@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
-import styles from "./Education.module.scss"
+import * as styles from "./Education.module.scss"
 import Section from "./Section"
 import { DateTime } from "luxon"
 

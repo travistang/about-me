@@ -1,21 +1,14 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Section from "./Section"
-import styles from "./Experience.module.scss"
+import * as styles from "./Experience.module.scss"
 import { useLocation } from "@reach/router"
 import { DateTime } from "luxon"
 
 const formatDate = dateString =>
   DateTime.fromFormat(dateString, "M/yyyy").toFormat("MMM yyyy")
 
-const ExperienceItem = ({
-  startDate,
-  endDate,
-  company,
-  role,
-  synopsis,
-  tasks,
-}) => (
+const ExperienceItem = ({ startDate, endDate, company, role, tasks }) => (
   <div className={styles.experienceItemContainer}>
     <div className={styles.dateContainer}>
       <span>{formatDate(startDate)}</span>
@@ -46,7 +39,6 @@ const Experience = () => {
           endDate
           company
           role
-          synopsis
           technologies
           tasks
           categories
@@ -75,7 +67,7 @@ const Experience = () => {
   return (
     <Section title="Experience">
       {experiences.map(exp => (
-        <ExperienceItem {...exp} />
+        <ExperienceItem key={exp.company} {...exp} />
       ))}
     </Section>
   )

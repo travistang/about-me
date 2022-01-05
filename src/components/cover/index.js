@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./index.module.scss"
+import * as styles from "./index.module.scss"
 import Section from "../section"
 import Image from "../image"
 import Typist from "react-typist"
@@ -11,12 +11,7 @@ import classnames from "classnames"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 import { navigate } from "@reach/router"
-/**
- * What will happen for the animation:
- * 1s fade in cover photo
- *  1s slide image left to right
- * 1s typing
- */
+
 const Cover = () => {
   const isMobile = useIsMobile()
   return (

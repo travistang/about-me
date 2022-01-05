@@ -2,7 +2,7 @@ import React from "react"
 import Section from "../section"
 import { useStaticQuery, graphql } from "gatsby"
 import Timeline from "../timeline"
-import styles from "./index.module.scss"
+import * as styles from "./index.module.scss"
 
 const Education = () => {
   const data = useStaticQuery(graphql`

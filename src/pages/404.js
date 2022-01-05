@@ -2,7 +2,7 @@ import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { graphql, useStaticQuery } from "gatsby"
 import iconMap from "../components/iconMap"
-import styles from "./404.module.scss"
+import * as styles from "./404.module.scss"
 import Header from "../components/header"
 import ContactSection from "../components/contact"
 

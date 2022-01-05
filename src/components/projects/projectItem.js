@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./projectItem.module.scss"
+import * as styles from "./projectItem.module.scss"
 import PropTypes from "prop-types"
 import { IconifyIcons as iconMap } from "../iconMap"
 import TechIcon from "../techIcon"

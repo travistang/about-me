@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import styles from "./index.module.scss"
+import * as styles from "./index.module.scss"
 import Section from "../section"
 import PropTypes from "prop-types"
 import iconMap from "../iconMap"

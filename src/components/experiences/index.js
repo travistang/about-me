@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Timeline from "../timeline"
 import TechIcon from "../techIcon"
 import PropTypes from "prop-types"
-import styles from "./index.module.scss"
+import * as styles from "./index.module.scss"
 
 const SubtitleComponent = ({ company, nature, technologies }) => (
   <div className={styles.subtitleContainer}>

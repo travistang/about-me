@@ -1,6 +1,20 @@
 {
   "experiences": [
     {
+      "company": "CHECK24",
+      "nature": "Full time",
+      "role": "Software developer (Fullstack)",
+      "categories": ["FE", "BE"],
+      "startDate": "1/2021",
+      "technologies": ["React", "Redux", "Typescript", "Nodejs"],
+      "synopsis": "Develop and maintain an insurance management and broker platform with a microservice architecture.",
+      "tasks": [
+        "Develop various web applications with React",
+        "Develop Rest APIs and jobs with Nodejs",
+        "Making extensive use of tools like Jira, Bitbucket, Bamboo etc"
+      ]
+    },
+    {
       "company": "Motius",
       "nature": "Full time",
       "role": "Frontend developer",

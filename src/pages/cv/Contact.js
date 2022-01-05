@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import IconMap from "../../components/iconMap"
 import Section from "./Section"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import styles from "./Contact.module.scss"
+import * as styles from "./Contact.module.scss"
 
 const Contact = () => {
   const data = useStaticQuery(graphql`

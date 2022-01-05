@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./header.module.scss"
+import * as styles from "./header.module.scss"
 import iconMap from "./iconMap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { AnchorLink } from "gatsby-plugin-anchor-links"

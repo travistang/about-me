@@ -2,6 +2,7 @@
 
 // common button styles
 .button {
+  background: unset;
   @include clickable;
   @mixin fillColor($color) {
     color: $color;

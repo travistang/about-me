@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import IconMap from "../../components/iconMap"
-import styles from "./NameSection.module.scss"
+import * as styles from "./NameSection.module.scss"
 
 const NameSection = () => {
   const data = useStaticQuery(graphql`
